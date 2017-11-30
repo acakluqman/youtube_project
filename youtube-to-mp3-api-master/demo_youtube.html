@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Youtube COnverter</title>
+<style>
+input[type="text"]{
+width:400px;
+height:30px;
+}
+#TubeSearchBox input[type="submit"]{
+width:100px;
+height:30px;
+}
+button{
+width:100px;
+height:30px;
+}
+.innerd{
+ width: 600px;
+ border:solid 1px #ccc;
+ margin: 0px auto;
+ text-align:center;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://tubemp3script.com/player/myplayer.js"></script>
+<script> 
+$(document).ready(function() { 
+applyplayer(); applysearch(); applysearchBox(); applybutton() });
+</script>
+</head>
+<body>
+<div class="innerd">
+<h1>Youtube Converter</h1>
+<p>Paste valid youtube url</p>
+<input type="text" value="http://www.youtube.com/watch?v=0y3pugY-Tsc" id="textURL"></input>
+<button onclick="convertByform()">Convert</button>
+<h1>Search Youtube video</h1>
+<form id="TubeSearchBox" action="#Searchtarget"> <input name="s" type="text" />
+<input name="search" type="submit" value="search" /> </form>
+<div class="tubemp3result" id="Searchtarget"></div>
+</body>
+</div>
+</html>
